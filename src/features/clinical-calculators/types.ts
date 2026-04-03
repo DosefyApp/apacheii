@@ -49,6 +49,11 @@ export type ReferenceLink = {
   href: string;
 };
 
+export type VariantTabs = {
+  fieldName: string;
+  options: FieldOption[];
+};
+
 export type ResultRow = {
   label: string;
   value: string;
@@ -90,6 +95,7 @@ export type CalculatorManifest = {
   note?: string;
   limitations: string[];
   references: ReferenceLink[];
+  variantTabs?: VariantTabs;
   sections: CalculatorSection[];
   fields: CalculatorField[];
   initialValues: Record<string, string | boolean>;
